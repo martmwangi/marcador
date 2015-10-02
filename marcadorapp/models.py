@@ -42,6 +42,7 @@ class Bookmark(models.Model):
         verbose_name_plural = 'bookmarks'
         ordering = ['-date_created']
 
+
     def __str__(self):
         return '%s (%s)' % (self.title, self.url)
 
@@ -50,7 +51,6 @@ class Bookmark(models.Model):
             self.date_created = now()
         self.date_updated = now()
         super(Bookmark, self).save(*args, **kwargs)
-
 
 
 
